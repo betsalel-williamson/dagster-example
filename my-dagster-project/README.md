@@ -7,13 +7,15 @@ This is a [Dagster](https://dagster.io/) project scaffolded with [`dagster proje
 First, install your Dagster repository as a Python package. By using the --editable flag, pip will install your repository in ["editable mode"](https://pip.pypa.io/en/latest/topics/local-project-installs/#editable-installs) so that as you develop, local code changes will automatically apply.
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
 Then, start the Dagit web server:
 
 ```bash
-dagit
+dagster dev -m my_dagster_project
 ```
 
 Open http://localhost:3000 with your browser to see the project.

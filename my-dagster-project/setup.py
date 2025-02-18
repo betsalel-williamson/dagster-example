@@ -13,6 +13,7 @@ if __name__ == "__main__":
             "nbformat",
             "ipykernel",
             "jupytext",
+            "google-api-python-client",
         ],
         extras_require={"dev": ["dagit", "pytest"]},
     )

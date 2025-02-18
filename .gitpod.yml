@@ -1,4 +1,8 @@
 ports:
 - port: 3000
 tasks:
-- command: cd my-dagster-project && pip install -e '.[dev]'
+- command: cd my-dagster-project && 
+    python3 -m venv .venv &&
+    source .venv/bin/activate &&
+    pip install -e '.[dev]'
+
