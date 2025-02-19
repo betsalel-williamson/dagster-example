@@ -9,7 +9,7 @@ from github import InputFileContent
 
 # Global variables (can be refactored as resources in Dagster)
 @asset(required_resource_keys={"youtube_api", "channel_display_name"})
-def channel_id(context):
+def channel_id(context) -> str:
     """Gets the YouTube channel ID using the channel's display name."""
     youtube = context.resources.youtube_api  # Access the youtube resource
     channelDisplayName = context.resources.channel_display_name
@@ -25,8 +25,8 @@ def channel_id(context):
         raise ValueError(f"Channel '{channelDisplayName}' not found.")
 
 
-@asset(non_argument_deps={"channel_id"}, required_resource_keys={"youtube_api"})
-def uploads_playlist_id(context, channel_id):
+@asset(required_resource_keys={"youtube_api"})
+def uploads_playlist_id(context, channel_id: str):
     """Gets the uploads playlist ID for the given channel ID."""
     youtube = context.resources.youtube_api  # Access the youtube resource
 
@@ -79,14 +79,14 @@ def video_data(context, uploads_playlist_id):
 
 
 @asset
-def video_views_dataframe(context, video_data):
+def video_views_dataframe(context, video_data) -> pd.DataFrame:
     """Creates a Pandas DataFrame from the video data."""
     df = pd.DataFrame(video_data, columns=["Video ID", "Title", "Published At", "Views"])
     context.log.info(f"DataFrame created with {len(df)} rows.")
     return df
 
 @asset
-def video_views_notebook(video_views_dataframe):
+def video_views_notebook(video_views_dataframe: pd.DataFrame):
     markdown = f"""
 # Video Data
 

@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dagster: Debug Dagit UI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "dagster",
+      "python": "${workspaceFolder}/my-dagster-project/.venv/bin/python",
+      "justMyCode": true,
+      "args": [
+        "dev",
+        "-m",
+        "my_dagster_project"
+      ],
+      "envFile": "${workspaceFolder}/my-dagster-project/.env",
+      "env": {
+        "DAGSTER_HOME": "${workspaceFolder}/my-dagster-project/tmpdata"
+      }
+    }
+  ]
+}
