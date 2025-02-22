@@ -17,6 +17,15 @@
       "env": {
         "DAGSTER_HOME": "${workspaceFolder}/my-dagster-project/tmpdata"
       }
-    }
+    },
+    {
+      "name": "Web Scraper",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/web-scraper/web_scraper/__init__.py",
+      "python": "${workspaceFolder}/web-scraper/.venv/bin/python",
+      "justMyCode": true,
+      "args": []
+    }    
   ]
 }
