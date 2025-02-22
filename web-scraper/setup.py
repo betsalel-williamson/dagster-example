@@ -6,7 +6,9 @@ if __name__ == "__main__":
         packages=find_packages(exclude=["web_scraper_tests"]),
         install_requires=[
             "beautifulsoup4",
-            "requests"
+            "requests",
+            "undetected-chromedriver",
+            "selenium"
         ],
         extras_require={"dev": ["pytest"]},
     )
