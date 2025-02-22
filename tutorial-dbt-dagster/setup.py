@@ -2,12 +2,15 @@ from setuptools import find_packages, setup
 
 if __name__ == "__main__":
     setup(
-        name="dtb_with_dagster",
-        packages=find_packages(exclude=["dtb_with_dagster_tests"]),
+        name="jaffle_shop",
+        packages=find_packages(exclude=["jaffle_shop_tests"]),
         install_requires=[
             "dagster-dbt",
             "dagster-webserver",
             "dbt-duckdb",
+            "pandas",
+            "duckdb",
+            "pyarrow",
         ],
         extras_require={"dev": ["pytest"]},
     )
