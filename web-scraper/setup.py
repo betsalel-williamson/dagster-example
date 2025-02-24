@@ -10,6 +10,7 @@ if __name__ == "__main__":
             "asyncio",
             "pandas",
             "lxml",
+            "html5lib",
         ],
         extras_require={"dev": ["pytest"]},
     )
