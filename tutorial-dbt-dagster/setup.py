@@ -11,6 +11,7 @@ if __name__ == "__main__":
             "pandas",
             "duckdb",
             "pyarrow",
+            "plotly",
         ],
         extras_require={"dev": ["pytest"]},
     )
