@@ -25,7 +25,9 @@
       "program": "${workspaceFolder}/web-scraper/web_scraper/__init__.py",
       "python": "${workspaceFolder}/web-scraper/.venv/bin/python",
       "justMyCode": true,
-      "args": []
+      "args": [
+        "${workspaceFolder}/web-scraper/curl.json",
+      ]
     }    
   ]
 }

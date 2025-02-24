@@ -5,10 +5,11 @@ if __name__ == "__main__":
         name="web_scraper",
         packages=find_packages(exclude=["web_scraper_tests"]),
         install_requires=[
-            "beautifulsoup4",
-            "requests",
-            "undetected-chromedriver",
-            "selenium"
+            "playwright",
+            "pytest-playwright",
+            "asyncio",
+            "pandas",
+            "lxml",
         ],
         extras_require={"dev": ["pytest"]},
     )
