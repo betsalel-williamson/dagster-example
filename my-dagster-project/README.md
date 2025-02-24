@@ -11,7 +11,7 @@ cd my-dagster-project
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e '.[dev]'
-export DAGSTER_HOME="$PWD/tmpdata"
+export DAGSTER_HOME="$PWD/.tmpdata"
 ```
 
 Then, start the Dagit web server:
