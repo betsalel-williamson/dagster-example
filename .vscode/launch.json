@@ -26,7 +26,7 @@
       "python": "${workspaceFolder}/web-scraper/.venv/bin/python",
       "justMyCode": true,
       "args": [
-        "${workspaceFolder}/web-scraper/curl.json",
+        "${workspaceFolder}/web-scraper/request.curl",
       ]
     }    
   ]
